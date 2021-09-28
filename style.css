@@ -1,2 +1,96 @@
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  padding: 20px 30px;
+
+  background-image: url(images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.slider {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-section {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-position: center;
+}
+.img-section > img {
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.description-section {
+  text-align: center;
+  width: 60%;
+  background-image: url(images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: top center;
+}
+.description-section > p {
+  margin: 10px 0;
+}
+
+.arrows {
+  background-color: white;
+  margin: 10px 0;
+  padding: 6px;
+  border-radius: 30px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.arrows > img {
+  margin: 0 6px;
+}
+.slider-2 {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    flex-direction: row-reverse;
+    /* display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+      'a b'
+      'c c'; */
+  }
+  .img-section {
+    /* grid-area: b;
+    align-self: flex-start; */
+  }
+  .description-section {
+    /* grid-area: a; */
+  }
+  .arrows {
+    /* grid-area: c; */
+  }
+}
